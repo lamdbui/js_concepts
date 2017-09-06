@@ -17,6 +17,7 @@ var willIGetNewPhone = new Promise(function(resolve, reject) {
 
 // call our Promise
 var askMom = function() {
+  console.log('Before asking mom');
   willIGetNewPhone
     .then(function(fulfilled) {
       console.log(fulfilled);
@@ -24,6 +25,7 @@ var askMom = function() {
     .catch(function(error) {
       console.log(error.message);
     });
+  console.log('After asking mom');
 };
 
 askMom();
